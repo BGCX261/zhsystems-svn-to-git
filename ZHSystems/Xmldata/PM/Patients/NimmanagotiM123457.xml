@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <medRecNo>M123457</medRecNo>
+  <firstName>Skylab</firstName>
+  <lastName>Nimmanagoti</lastName>
+  <sex>Male</sex>
+  <weight>165</weight>
+  <height>5.9</height>
+  <dateOfBirth>20/07/1980</dateOfBirth>
+  <homePhone>000-0000-0000</homePhone>
+  <cellPhone>999-9999-9999</cellPhone>
+  <email>email@email.com</email>
+  <address>123 Street ave,</address>
+  <city>Moon</city>
+  <state>Sky</state>
+  <zipCode>S1234</zipCode>
+</Patient>

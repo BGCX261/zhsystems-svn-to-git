@@ -1,0 +1,49 @@
+[Aug 14 11:28:14] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 11:28:15] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 11:28:27] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M1233456
+[Aug 14 11:28:28] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 11:28:31] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M123456
+[Aug 14 11:28:31] DEBUG (PatientUtils.java.getPatient:41) - NimmanagotiM123456.xml
+[Aug 14 11:28:31] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 11:28:31] DEBUG (PnlPatientLite.java.load:106) - Loading the patient lite:M123456
+[Aug 14 11:28:31] DEBUG (PnlVisits.java.load:47) - Load visits of the patient:M123456
+[Aug 14 12:10:22] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 12:10:22] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 12:10:44] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 12:10:44] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 12:11:00] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M123456
+[Aug 14 12:11:01] DEBUG (PatientUtils.java.getPatient:41) - NimmanagotiM123456.xml
+[Aug 14 12:11:01] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 12:11:01] DEBUG (PnlPatientLite.java.load:106) - Loading the patient lite:M123456
+[Aug 14 12:11:01] DEBUG (PnlVisits.java.load:47) - Load visits of the patient:M123456
+[Aug 14 12:11:45] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 12:11:45] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 12:11:53] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M123456
+[Aug 14 12:11:53] DEBUG (PatientUtils.java.getPatient:41) - NimmanagotiM123456.xml
+[Aug 14 12:11:53] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 12:11:53] DEBUG (PnlPatientLite.java.load:106) - Loading the patient lite:M123456
+[Aug 14 12:11:53] DEBUG (PnlVisits.java.load:47) - Load visits of the patient:M123456
+[Aug 14 12:13:06] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 12:13:06] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 12:13:15] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M123456
+[Aug 14 12:13:15] DEBUG (PatientUtils.java.getPatient:41) - NimmanagotiM123456.xml
+[Aug 14 12:13:15] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 12:13:15] DEBUG (PnlPatientLite.java.load:106) - Loading the patient lite:M123456
+[Aug 14 12:13:15] DEBUG (PnlVisits.java.load:47) - Load visits of the patient:M123456
+[Aug 14 12:13:24] DEBUG (PnlNotes.java.saveNotes:136) - Successfully saved the notes
+[Aug 14 15:26:32] DEBUG (AppFrame.java.actionPerformed:132) - *********** Starting the desktop documentation system *******
+[Aug 14 15:26:32] DEBUG (PhysicianDesktopFrame.java.<init>:22) - Initilizing the physician desktop
+[Aug 14 15:26:36] DEBUG (PatientUtils.java.getPatient:27) - Get the patient of :M123456
+[Aug 14 15:26:36] DEBUG (PatientUtils.java.getPatient:41) - NimmanagotiM123456.xml
+[Aug 14 15:26:36] DEBUG (PhysicianDesktop.java.load:170) - Load the patient information
+[Aug 14 15:26:36] DEBUG (PnlPatientLite.java.load:106) - Loading the patient lite:M123456
+[Aug 14 15:26:36] DEBUG (PnlVisits.java.load:47) - Load visits of the patient:M123456
+[Aug 14 15:27:02] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:02] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:03] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:03] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:17] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:18] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:31] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:27:41] DEBUG (PnlVisits.java.loadVisit:52) - Load the visit
+[Aug 14 15:49:31] DEBUG (PnlNotes.java.saveNotes:137) - Successfully saved the notes

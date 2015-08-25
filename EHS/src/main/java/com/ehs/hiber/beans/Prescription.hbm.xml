@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2011 11:50:14 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="hsystems" name="com.ehs.hiber.beans.Prescription" table="prescription">
+    <id name="prescriptionId" type="int">
+      <column name="PRESCRIPTION_ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="id" type="int">
+      <column name="ID" not-null="true"/>
+    </property>
+    <property name="visitNo" type="int">
+      <column name="VISIT_NO" not-null="true"/>
+    </property>
+    <property name="medrecno" type="string">
+      <column length="12" name="MEDRECNO" not-null="true"/>
+    </property>
+    <property name="prescriptionDate" type="timestamp">
+      <column length="19" name="PRESCRIPTION_DATE" not-null="true"/>
+    </property>
+    <property name="medicationId" type="java.lang.Integer">
+      <column name="MEDICATION_ID"/>
+    </property>
+    <property name="dose" type="string">
+      <column length="10" name="DOSE"/>
+    </property>
+    <property name="comments" type="string">
+      <column length="250" name="COMMENTS"/>
+    </property>
+    <property name="injectionId" type="java.lang.Integer">
+      <column name="INJECTION_ID"/>
+    </property>
+    <property name="createdBy" type="string">
+      <column length="12" name="CREATED_BY" not-null="true"/>
+    </property>
+    <property name="createdDate" type="timestamp">
+      <column length="19" name="CREATED_DATE" not-null="true"/>
+    </property>
+    <property name="updatedBy" type="string">
+      <column length="12" name="UPDATED_BY"/>
+    </property>
+    <property name="updatedDate" type="timestamp">
+      <column length="19" name="UPDATED_DATE" not-null="true"/>
+    </property>
+    <property name="deleted" type="int">
+      <column name="DELETED" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

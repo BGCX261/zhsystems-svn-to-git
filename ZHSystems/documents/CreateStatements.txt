@@ -1,0 +1,268 @@
+delimiter $$
+
+CREATE TABLE `biometrics` (
+  `ID` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `HEIGHT` float DEFAULT NULL,
+  `WEIGHT` float DEFAULT NULL,
+  `AGE` int(11) DEFAULT NULL,
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `doctor` (
+  `ID` int(11) NOT NULL,
+  `DOCTOR_ID` varchar(12) NOT NULL,
+  `FIRST_NAME` varchar(50) NOT NULL,
+  `LAST_NAME` varchar(50) NOT NULL,
+  `ADDRESS` varchar(200) DEFAULT NULL,
+  `CITY` varchar(50) DEFAULT NULL,
+  `STATE` varchar(50) DEFAULT NULL,
+  `ZIP_CODE` int(11) DEFAULT NULL,
+  `HOME_PHONE` int(11) DEFAULT NULL,
+  `CELL_PHONE` int(11) DEFAULT NULL,
+  `EMAIL` varchar(100) DEFAULT NULL,
+  `FAX` int(11) DEFAULT NULL,
+  `LICENSE_NO` varchar(30) DEFAULT NULL,
+  `QUALIFICATION` varchar(50) DEFAULT NULL,
+  `ACTIVE` char(1) NOT NULL DEFAULT 'Y',
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`DOCTOR_ID`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+-----------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `history` (
+  `ID` int(11) NOT NULL,
+  `HISTORY_TYPE_ID` varchar(12) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `NAME` varchar(50) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  `START_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `END_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`HISTORY_TYPE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+--------------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `history_type` (
+  `ID` int(11) NOT NULL,
+  `TYPE` varchar(12) NOT NULL,
+  `DESCRIPTION` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `TYPE` (`TYPE`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+----------------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `lab_type` (
+  `ID` int(11) NOT NULL,
+  `TYPE` varchar(12) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `TYPE` (`TYPE`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+----------------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `labrecords` (
+  `ID` int(11) NOT NULL,
+  `TYPE_ID` varchar(12) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+---------------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `medications` (
+  `ID` int(11) NOT NULL,
+  `NAME` varchar(50) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  `STRENGH` varchar(10) DEFAULT NULL,
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) NOT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+------------------------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `notes` (
+  `ID` int(11) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `NOTES` varchar(2000) NOT NULL,
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+-------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `patient` (
+  `ID` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `FIRST_NAME` varchar(50) NOT NULL,
+  `LAST_NAME` varchar(50) NOT NULL,
+  `ADDRESS` varchar(200) DEFAULT NULL,
+  `CITY` varchar(50) DEFAULT NULL,
+  `ZIP_CODE` int(11) DEFAULT NULL,
+  `HOME_PHONE` int(11) DEFAULT NULL,
+  `CELL_PHONE` int(11) DEFAULT NULL,
+  `STATE` varchar(50) DEFAULT NULL,
+  `GENDER` char(1) NOT NULL,
+  `DATE_OF_BIRTH` date DEFAULT NULL,
+  `EMAIL` varchar(100) DEFAULT NULL,
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`MEDRECNO`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+-------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `prescription` (
+  `ID` int(11) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `PRESCRIPTION_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `MEDICATION_ID` int(11) DEFAULT NULL,
+  `DOSE` varchar(10) DEFAULT NULL,
+  `COMMENTS` varchar(250) DEFAULT NULL,
+  `INJECTION_ID` int(11) DEFAULT NULL,
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `PRESCRIPTION_ID` int(11) NOT NULL,
+  PRIMARY KEY (`PRESCRIPTION_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+-------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `role` (
+  `ID` int(11) NOT NULL,
+  `ROLE_ID` varchar(12) NOT NULL,
+  `NAME` varchar(50) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  `ACTIVE` char(1) NOT NULL DEFAULT 'Y',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ROLE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+----------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `specialization` (
+  `ID` int(11) NOT NULL,
+  `NAME` varchar(50) NOT NULL,
+  `DESCRIPTION` varchar(250) DEFAULT NULL,
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATE_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`NAME`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+
+
+-------------------------------------------------------
+
+delimiter $$
+
+CREATE TABLE `user` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(12) NOT NULL,
+  `PASSWORD` varchar(250) NOT NULL,
+  `FIRST_NAME` varchar(50) NOT NULL,
+  `LAST_NAME` varchar(50) NOT NULL,
+  `ACTIVE` char(1) NOT NULL DEFAULT 'Y',
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `ROLD_ID` varchar(12) NOT NULL,
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`USERNAME`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+-----------------------------------------------
+
+
+delimiter $$
+
+CREATE TABLE `visit` (
+  `ID` int(11) NOT NULL,
+  `VISIT_NO` int(11) NOT NULL,
+  `MEDRECNO` varchar(12) NOT NULL,
+  `VISIT_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `DOCTOR_ID` varchar(12) NOT NULL,
+  `REASON` varchar(250) DEFAULT NULL,
+  `FAMILY_DOCTOR_ID` varchar(12) DEFAULT NULL,
+  `DELETED` int(11) NOT NULL DEFAULT '0',
+  `CREATED_BY` varchar(12) NOT NULL,
+  `CREATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `UPDATED_BY` varchar(12) DEFAULT NULL,
+  `UPDATED_DATE` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`VISIT_NO`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+

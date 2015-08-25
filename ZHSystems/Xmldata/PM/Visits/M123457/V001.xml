@@ -1,0 +1,9 @@
+<Visit>
+    <visitNo>001</visitNo>
+    <medRecNo>M123457</medRecNo>
+    <visitDate>22/12/1992</visitDate>
+    <drName>ramesh</drName>
+    <comments>comments</comments>
+    <height>5.10</height>
+    <weight>165</weight>
+</Visit>

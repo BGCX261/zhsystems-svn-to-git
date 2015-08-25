@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2011 11:50:14 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="hsystems" name="com.ehs.hiber.beans.Notes" table="notes">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="visitNo" type="int">
+      <column name="VISIT_NO" not-null="true"/>
+    </property>
+    <property name="medrecno" type="string">
+      <column length="12" name="MEDRECNO" not-null="true"/>
+    </property>
+    <property name="notes" type="string">
+      <column length="2000" name="NOTES" not-null="true"/>
+    </property>
+    <property name="deleted" type="int">
+      <column name="DELETED" not-null="true"/>
+    </property>
+    <property name="createdBy" type="string">
+      <column length="12" name="CREATED_BY" not-null="true"/>
+    </property>
+    <property name="createdDate" type="timestamp">
+      <column length="19" name="CREATED_DATE" not-null="true"/>
+    </property>
+    <property name="updatedBy" type="string">
+      <column length="12" name="UPDATED_BY"/>
+    </property>
+    <property name="updatedDate" type="timestamp">
+      <column length="19" name="UPDATED_DATE" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

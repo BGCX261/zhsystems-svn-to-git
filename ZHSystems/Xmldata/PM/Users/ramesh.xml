@@ -1,0 +1,8 @@
+<User>
+    <userId>ramesh</userId>
+    <userName>First User</userName>
+    <password>letmein</password>
+    <drCode>1234</drCode>
+    <privilages>admin</privilages>
+    <active>Y</active>
+    <delete>0</delete></User>

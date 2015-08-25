@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2011 11:50:14 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="hsystems" name="com.ehs.hiber.beans.Doctor" table="doctor">
+    <id name="doctorId" type="string">
+      <column length="12" name="DOCTOR_ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="id" type="int">
+      <column name="ID" not-null="true" unique="true"/>
+    </property>
+    <property name="firstName" type="string">
+      <column length="50" name="FIRST_NAME" not-null="true"/>
+    </property>
+    <property name="lastName" type="string">
+      <column length="50" name="LAST_NAME" not-null="true"/>
+    </property>
+    <property name="address" type="string">
+      <column length="200" name="ADDRESS"/>
+    </property>
+    <property name="city" type="string">
+      <column length="50" name="CITY"/>
+    </property>
+    <property name="state" type="string">
+      <column length="50" name="STATE"/>
+    </property>
+    <property name="zipCode" type="java.lang.Integer">
+      <column name="ZIP_CODE"/>
+    </property>
+    <property name="homePhone" type="java.lang.Integer">
+      <column name="HOME_PHONE"/>
+    </property>
+    <property name="cellPhone" type="java.lang.Integer">
+      <column name="CELL_PHONE"/>
+    </property>
+    <property name="email" type="string">
+      <column length="100" name="EMAIL"/>
+    </property>
+    <property name="fax" type="java.lang.Integer">
+      <column name="FAX"/>
+    </property>
+    <property name="licenseNo" type="string">
+      <column length="30" name="LICENSE_NO"/>
+    </property>
+    <property name="qualification" type="string">
+      <column length="50" name="QUALIFICATION"/>
+    </property>
+    <property name="active" type="char">
+      <column length="1" name="ACTIVE" not-null="true"/>
+    </property>
+    <property name="deleted" type="int">
+      <column name="DELETED" not-null="true"/>
+    </property>
+    <property name="createdBy" type="string">
+      <column length="12" name="CREATED_BY" not-null="true"/>
+    </property>
+    <property name="createdDate" type="timestamp">
+      <column length="19" name="CREATED_DATE" not-null="true"/>
+    </property>
+    <property name="updatedBy" type="string">
+      <column length="12" name="UPDATED_BY"/>
+    </property>
+    <property name="updatedDate" type="timestamp">
+      <column length="19" name="UPDATED_DATE" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

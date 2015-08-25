@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Hsystems</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">96it230</property>
+    <property name="hibernate.connection.pool_size">10</property>
+    <mapping resource="com/ehs/hiber/beans/Notes.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Medications.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/HistoryType.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Biometrics.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Visit.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Patient.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/User.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/HUser.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Role.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Labrecords.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Doctor.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Specialization.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/LabType.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/History.hbm.xml"/>
+    <mapping resource="com/ehs/hiber/beans/Prescription.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

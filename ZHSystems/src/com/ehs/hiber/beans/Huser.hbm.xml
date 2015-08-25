@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2010 7:12:41 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.ehs.hiber.beans.Huser" table="huser" catalog="hsystems">
+        <id name="userid" type="string">
+            <column name="USERID" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" length="50" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="50" not-null="true" />
+        </property>
+        <property name="active" type="char">
+            <column name="ACTIVE" length="1" not-null="true" />
+        </property>
+        <property name="roleId" type="int">
+            <column name="ROLE_ID" not-null="true" />
+        </property>
+        <property name="deleted" type="int">
+            <column name="DELETED" not-null="true" />
+        </property>
+        <property name="createdUser" type="string">
+            <column name="CREATED_USER" length="15" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true" />
+        </property>
+        <property name="lastUpdatedUser" type="string">
+            <column name="LAST_UPDATED_USER" length="15" />
+        </property>
+        <property name="lastUpdatedDate" type="timestamp">
+            <column name="LAST_UPDATED_DATE" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2011 11:50:14 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="hsystems" name="com.ehs.hiber.beans.Medications" table="medications">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="50" name="NAME" not-null="true"/>
+    </property>
+    <property name="description" type="string">
+      <column length="250" name="DESCRIPTION"/>
+    </property>
+    <property name="strengh" type="string">
+      <column length="10" name="STRENGH"/>
+    </property>
+    <property name="createdBy" type="string">
+      <column length="12" name="CREATED_BY" not-null="true"/>
+    </property>
+    <property name="createdDate" type="timestamp">
+      <column length="19" name="CREATED_DATE" not-null="true"/>
+    </property>
+    <property name="updatedBy" type="string">
+      <column length="12" name="UPDATED_BY" not-null="true"/>
+    </property>
+    <property name="updatedDate" type="timestamp">
+      <column length="19" name="UPDATED_DATE" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
